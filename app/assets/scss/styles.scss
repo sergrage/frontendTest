@@ -1,0 +1,29 @@
+@import "bootstrap/scss/bootstrap";
+@import "animate.css/animate.min";
+
+// @import "owl.carousel/src/scss/owl.carousel.scss";
+// @import 'owl.carousel/dist/assets/owl.carousel.css';
+
+// $fa-font-path: "../webfonts";
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
+
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/global';
+@import 'base/helpers';
+@import 'base/btn';
+
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/features';
+@import 'sections/post';
+@import 'sections/parallax';
+@import 'sections/timeline';
+@import 'sections/form';
+@import 'sections/footer';

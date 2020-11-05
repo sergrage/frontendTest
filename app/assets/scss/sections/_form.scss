@@ -1,0 +1,13 @@
+.form {
+	padding-bottom: 5rem;
+
+	& .container::after {
+		margin: 0 auto;
+		content: "";
+		display: block;
+		height: 1px;
+		background-color: $mainColor;
+		width: auto;
+		margin-top: 5rem;
+	}
+}

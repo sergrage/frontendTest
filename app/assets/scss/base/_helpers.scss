@@ -1,0 +1,33 @@
+.pb-120 {
+	padding-bottom: 120px;
+}
+
+.mainColor {
+	color: $mainColor !important;
+}
+
+
+.mainColorMain {
+	color: $mainColor !important;
+
+	&::after {
+		margin: 0 auto;
+		content: "";
+		display: block;
+		height: 3px;
+		background-color: $mainColor;
+		width: 170px;
+		margin-top: 20px;
+	}
+}
+
+.opacity-0 {
+	opacity: 0;
+	transition: all 1.5s ease-out;
+	// transform: scale(1.15);
+}
+
+.opacity-1 {
+	opacity: 1;
+	// transform: scale(1);
+}

@@ -1,0 +1,201 @@
+.header {
+// 1 rem =16px
+// rem относительная еденица измерения. рассчитывается относительно главного эдемента на странице,
+// т.е. тега <html>
+// размер текста <html> - 16px
+// https://getbootstrap.com/docs/4.0/content/reboot/
+// https://developer.mozilla.org/ru/docs/Web/CSS/font-size
+	
+	&__upButton{
+		right: 50%;
+    	transform: translateX(50%);
+		font-size: 3rem;
+		color: $mainColor;
+		padding-top: .3125rem;
+    	padding-bottom: .3125rem;
+    	position: absolute;
+    	
+    	bottom: 20px;
+    	@include at-768 {
+    		right: 30px;
+    		transform: translateX(0);
+    	}
+	}
+
+
+	&__navbar {
+
+
+
+		&--fixed {
+			position: fixed;
+		    top: 0;
+		    right: 0;
+		    left: 0;
+		    z-index: 1030;
+		    background-color: #ffffff;
+		    border-bottom: 4px solid $mainColor;
+
+		}
+	}
+
+	&__brand {
+		color: #4f4d4d;
+		font-size: 1.0rem;
+		font-weight: 400;
+
+		@include at-576 {
+			font-size: 1.2rem;
+		}
+
+		@include at-768 {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__logo {
+		width: 30px;
+		
+		@include at-768 {
+			width: 50px;
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		// @media (min-width: 992px) {
+		// 	display: flex;
+		// }
+
+		@include at-992 {
+			display: flex;
+		}
+
+		&--visible {
+			display: block;
+		    position: fixed;
+		    z-index: 1000;
+		    background: #ffffff;
+		    top: 0;
+		    height: 277px;
+		    right: -1px;
+		    width: 200px;
+		    border-left: 1px solid #878787;
+		}
+
+		&--visible-down {
+			height: 233px !important;
+
+			@include at-992 {
+				height: auto !important;
+			}
+		}
+
+		&-link-open-first {
+			margin-top: 57px;
+
+			@include at-992 {
+				margin-top: 0;
+			}
+		}
+
+		&-link-open {
+    		border-bottom: 2px solid #878787;
+		}
+	}
+
+	&__menuLink {
+		color: #4f4d4d;
+
+		
+		&::after {
+			margin: 0 auto;
+			content: "";
+			display: block;
+			// position: absolute;
+			height: 2px;
+			background-color: transparent;
+			width: 100%;
+			// margin-top: 10px;
+			transition: all .5s;
+		}
+
+		&:hover {
+			color: #000000;
+			transition: all .5s;
+
+			&::after {
+				background-color: $mainColor;
+			}
+
+			
+		}
+	}
+
+
+    &__menuIcon {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+		cursor: pointer;
+		z-index: 1111;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 3px;
+            background-color: #878787;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+        &__middle {
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 25px;
+            height: 3px;
+            background-color: #878787;
+            // transition: all .3s ease-out;
+            transform-origin: 0 50%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 25px;
+            height: 3px;
+            background-color: #878787;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+        @include at-992 {
+            display: none;
+        }
+    }
+
+    &__menuIcon--close {
+    	position: fixed;
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+            top: 0;
+            left: 0;
+        }
+        .header__menuIcon__middle {
+            opacity: 0;
+            transform: sacleX(0);
+        }
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+            bottom:  1px;
+            left: 0;
+        }
+    }
+}

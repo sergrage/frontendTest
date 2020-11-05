@@ -1,0 +1,66 @@
+/* Mixins for adaptive design. Bootstrap 4*/
+// https://sass-lang.com/documentation/at-rules/mixin
+// https://getbootstrap.com/docs/4.0/layout/grid/
+
+// все что выше данного разрешения
+// от маленькой ширины 320 и выше
+
+@mixin less-320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin at-320 {
+  @media (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin at-400 {
+  @media (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin at-500 {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin at-576 {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin at-768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin at-992 {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin at-1200 {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin at-1400 {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin at-576-768 {
+  @media (min-width: 576px) and (max-width: 767.97px) {
+    @content;
+  }
+}

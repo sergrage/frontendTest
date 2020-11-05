@@ -1,0 +1,27 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.example1{
+	font: 100% $font-stack;
+
+	p { color: $primary-color;	}
+}
+
+.example2 {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+  body.firefox & { font-weight: normal; }
+} 

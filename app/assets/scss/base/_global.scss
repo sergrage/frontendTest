@@ -1,0 +1,80 @@
+body {
+	font-family: "OpenSans";
+}
+
+// html {
+// 	font-size: 16px;
+// }
+
+section {
+	position: relative;
+	// padding-bottom: 150px;
+	padding-bottom: 5rem;
+
+	@include at-768 {
+		padding-bottom: 9rem;
+	}
+}
+
+h2.title {
+	color: #000000;
+	font-size: 1.5rem; // 24px
+	font-weight: 700;
+	margin: 0 auto;
+
+	&::after {
+		margin: 0 auto;
+		content: "";
+		display: block;
+		height: 3px;
+		background-color: $mainColor;
+		width: 170px;
+		margin-top: 20px;
+	}
+
+	&--pb-120 {
+		padding-bottom: 60px;
+
+		@include at-768 {
+			padding-bottom: 120px;
+		}
+	}
+
+	&--pb-30 {
+		padding-bottom: 2rem;
+	}
+
+
+	&--no-after {
+		&::after {
+			display: none;
+		}
+	}
+
+	&--tb {
+		padding-top: 120px;
+		padding-bottom: 30px;
+	}
+
+	&--timeline {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+
+		@include at-576 {
+			font-size: 1.5rem; // 24px
+			margin-bottom: 0;
+		}
+	}
+}
+
+p {
+	font-size: 0.875rem; // 14 px
+	font-weight: 400;
+	color: #878787;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+

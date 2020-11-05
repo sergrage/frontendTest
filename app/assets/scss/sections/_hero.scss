@@ -1,0 +1,174 @@
+.hero {
+
+	&__containerCustom {
+		max-width: 1366px;
+		width: 100%;
+	    padding-right: 0px;
+	    padding-left: 0px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    position: relative;
+	}
+
+	&__mountain-top {
+		display: none;
+		position: absolute;
+		top: -2px;
+
+		@include at-576 {
+			font-size: 1.2rem;
+			display: block;
+		}
+	}
+
+	&__paper-bottom {
+		display: none;
+		position: absolute;
+		bottom: -2px;
+
+		@include at-576 {
+			display: block;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__titleWrapper {
+		// width: 650px;
+		// height: 460px;
+		
+		background-color: rgba(0, 0, 0, .4);
+		position: absolute;
+		z-index: 10;
+		// width: 19rem;
+	 //    height: 16.0rem;
+	 	width: 92%;
+   		height: 67%;
+	    top: 15%;
+	    left: 50%;
+
+	    transform: translateX(-50%);
+
+	  //   @include at-320 {
+			// top: 4%;
+			// left: 50%;
+			// width: 17.0rem;
+			// height: 12.5rem;
+	  //   }
+	    
+	    @include at-400 {
+			// width: 20.0rem;
+			// height: 14.5rem;
+	    }
+
+	    @include at-500 {
+			// width: 25.0rem;
+			// height: 17.5rem;
+	    }
+
+	   	@include at-576 {
+			top: 14%;
+			left: 10%;
+			width: 26.0rem;
+			height: 17.5rem;
+			transform: none;
+		}
+
+		@include at-768 {
+			width: 30.0rem;
+			height: 20.0rem;
+		}
+
+		@include at-992 {
+			width: 40.625rem;
+			height: 28.75rem;
+		}
+	}
+
+	&__title {
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 2.0rem;
+
+		@include at-400 {
+			font-size: 2.5rem;
+	    }
+
+	    @include at-500 {
+			font-size: 3.0rem;
+	    }
+
+		@include at-576 {
+			font-size: 2.5rem;
+		}
+
+		@include at-768 {
+			font-size: 3.0rem;
+		}
+
+		@include at-992 {
+			font-size: 4.5rem;
+		}
+	}
+
+	&__subtitle {
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		
+		@include at-400 {
+			font-size: 1.8rem;
+	    }
+
+	    @include at-500 {
+			font-size: 2.0rem;
+	    }
+
+		@include at-576 {
+			font-size: 1.5rem;
+		}
+
+		@include at-768 {
+			font-size: 2rem;
+		}
+
+		@include at-992 {
+			font-size: 3rem;
+		}
+	}
+
+	&__quoteWrapper {
+		display: none;
+		// width: 650px;
+		// height: 460px;
+		width: 40.625rem;
+		height: 28.75rem;
+		background-color: rgba(0, 0, 0, .4);
+		position: absolute;
+		bottom: 14%;
+		right: 10%;
+
+		@include at-1200 {
+			display: block;
+		}
+	}
+
+	&__quote {
+		color: #ffffff;
+		font-size: 1.5rem;
+		padding-top: 14rem;
+		position: relative;
+		z-index: 20;
+
+		@include at-1400 {
+			padding-top: 9rem;
+		}
+	}
+
+	&__author {
+		color: #ffffff;
+		font-size: 1.5rem;
+		position: relative;
+		z-index: 20;
+	}
+}

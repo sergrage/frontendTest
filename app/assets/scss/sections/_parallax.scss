@@ -1,0 +1,15 @@
+// .parallax-img {
+// 	background: url("/assets/img/parallax-1110.jpg") center repeat fixed;
+// 	background-size: cover;
+// } старый вариант
+
+
+.parallax-img {
+	&.lazyloaded {
+		background: url("/assets/img/parallax-1110.jpg") center repeat fixed;
+		background-size: cover;
+	}
+}
+
+// когда прокрутим к секции, класс lazyload изменится
+// на lazyloaded и вступят в силу свойства CSS

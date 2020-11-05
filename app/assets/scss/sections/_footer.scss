@@ -1,0 +1,57 @@
+.footer {
+	padding-bottom: 4rem;
+	text-align: center;
+
+	@include at-768 {
+		text-align: inherit; // значение наследется от родителя
+	}
+
+
+
+	&__icon {
+		font-size: 2rem;
+		padding-right: 1rem;
+
+		@include at-768 {
+			font-size: 3rem;
+		}
+
+		&--twitter {
+			color: $mainColor;
+			transition: all .5s;
+
+			&:hover {
+				color: #00a2f5;
+				transition: all .5s;
+			}
+		}
+		&--facebook {
+			// color: #23599b;
+			color: $mainColor;
+			transition: all .5s;
+
+			&:hover {
+				color: #1c477c;
+				transition: all .5s;
+
+			}
+		}
+		&--instagram {
+			color: $mainColor;
+			transition: all 1.5s;
+			&:hover {
+				// color: #b51d85;
+				color: #e325a7;
+				transition: all .5s;
+			}
+		}
+	}
+
+	&__iconMobile {
+		font-size: 1.2rem;
+	}
+
+	&__iconEmail {
+		font-size: 1.2rem;
+	}
+}
